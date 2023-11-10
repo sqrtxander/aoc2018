@@ -6,7 +6,7 @@ import os.path
 import pytest
 
 import support
-from collections import Counter, defaultdict
+from collections import Counter
 
 INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.in')
 
@@ -22,7 +22,6 @@ def solve(s: str) -> int:
         threes += 3 in counts.values()
     return twos * threes
 
-        
 
 INPUT_S = '''\
 abcdef
@@ -59,4 +58,3 @@ def main() -> int:
 
 if __name__ == '__main__':
     raise SystemExit(main())
-

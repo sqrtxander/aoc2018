@@ -6,12 +6,11 @@ import os.path
 import pytest
 
 import support
-from collections import Counter, defaultdict
 
 INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.in')
 
 
-def solve(s: str) -> int:
+def solve(s: str) -> str:
     lines = s.splitlines()
 
     for i, line_1 in enumerate(lines):
@@ -19,7 +18,7 @@ def solve(s: str) -> int:
             if sum(1 for a, b in zip(line_1, line_2) if a != b) == 1:
                 return ''.join(a for a, b in zip(line_1, line_2) if a == b)
     raise AssertionError('No solution found')
-        
+
 
 INPUT_S = '''\
 abcde
@@ -56,4 +55,3 @@ def main() -> int:
 
 if __name__ == '__main__':
     raise SystemExit(main())
-
