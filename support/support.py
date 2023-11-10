@@ -42,7 +42,6 @@ def _get_cookie_headers() -> dict[str, str]:
 
 def get_input(year: int, day: int) -> str:
     url = f'https://adventofcode.com/{year}/day/{day}/input'
-    print(url)
     req = urllib.request.Request(url, headers=_get_cookie_headers())
     return urllib.request.urlopen(req).read().decode()
 
@@ -55,7 +54,6 @@ def get_year_day() -> tuple[int, int]:
     if not day_s.startswith('day') or not year_s.startswith('aoc'):
         raise AssertionError(f'unexpected working dir: {cwd}')
 
-    print(year_s[len('aoc'):], day_s[len('day'):])
     return int(year_s[len('aoc'):]), int(day_s[len('day'):])
 
 
