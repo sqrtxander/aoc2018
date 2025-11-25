@@ -1,5 +1,5 @@
-.env
-.envrc
+.stack-work/
+*~
+
+# hide input files for eric :)
 input.in
-fourmolu.yaml
-bin/
