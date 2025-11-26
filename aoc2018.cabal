@@ -23,6 +23,7 @@ data-files:
     src/Day05/input.in
     src/Day06/input.in
     src/Day07/input.in
+    src/Day08/input.in
 
 source-repository head
   type: git
@@ -46,6 +47,8 @@ library
       Day06.Part02
       Day07.Part01
       Day07.Part02
+      Day08.Part01
+      Day08.Part02
   other-modules:
       Paths_aoc2018
   hs-source-dirs:
