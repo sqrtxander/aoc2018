@@ -17,6 +17,7 @@ dependencies:
 - filepath
 - directory
 - parsec
+- time
 
 ghc-options:
 - -Wall

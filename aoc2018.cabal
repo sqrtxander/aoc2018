@@ -19,6 +19,7 @@ data-files:
     src/Day01/input.in
     src/Day02/input.in
     src/Day03/input.in
+    src/Day04/input.in
 
 source-repository head
   type: git
@@ -34,6 +35,8 @@ library
       Day02.Part02
       Day03.Part01
       Day03.Part02
+      Day04.Part01
+      Day04.Part02
   other-modules:
       Paths_aoc2018
   hs-source-dirs:
@@ -45,6 +48,7 @@ library
     , directory
     , filepath
     , parsec
+    , time
   default-language: Haskell2010
 
 executable aoc2018
@@ -64,6 +68,7 @@ executable aoc2018
     , directory
     , filepath
     , parsec
+    , time
   default-language: Haskell2010
 
 test-suite aoc2018-test
@@ -81,4 +86,5 @@ test-suite aoc2018-test
     , directory
     , filepath
     , parsec
+    , time
   default-language: Haskell2010
