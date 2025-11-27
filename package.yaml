@@ -19,6 +19,7 @@ dependencies:
 - parsec
 - time
 - array
+- vector
 
 ghc-options:
 - -Wall
