@@ -26,6 +26,7 @@ data-files:
     src/Day08/input.in
     src/Day09/input.in
     src/Day10/input.in
+    src/Day11/input.in
 
 source-repository head
   type: git
@@ -55,13 +56,16 @@ library
       Day09.Part02
       Day10.Part01
       Day10.Part02
+      Day11.Part01
+      Day11.Part02
   other-modules:
       Paths_aoc2018
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
     , directory
     , filepath
@@ -81,6 +85,7 @@ executable aoc2018
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aoc2018
+    , array
     , base >=4.7 && <5
     , containers
     , directory
@@ -99,6 +104,7 @@ test-suite aoc2018-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aoc2018
+    , array
     , base >=4.7 && <5
     , containers
     , directory

@@ -25,6 +25,8 @@ import Day09.Part01
 import Day09.Part02
 import Day10.Part01
 import Day10.Part02
+import Day11.Part01
+import Day11.Part02
 
 moduleList :: Map.Map (Int, Int) (String -> Solution)
 moduleList =
@@ -51,6 +53,8 @@ moduleList =
         , ((9, 2), wrapSolution . Day09.Part02.solution)
         , ((10, 1), wrapSolution . Day10.Part01.solution)
         , ((10, 2), wrapSolution . Day10.Part02.solution)
+        , ((11, 1), wrapSolution . Day11.Part01.solution)
+        , ((11, 2), wrapSolution . Day11.Part02.solution)
         ]
 
 getModule :: Maybe Int -> Maybe Int -> Maybe (String -> Solution)
