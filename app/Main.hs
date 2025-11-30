@@ -27,6 +27,13 @@ parse [d, p] = do
         (Nothing, Just _) -> putStrLn "Solution not yet implemented" >> exitFailure
         (Just _, Nothing) -> putStrLn "Input not found" >> exitFailure
         (Nothing, Nothing) -> usage >> exitFailure
+parse [d, p, path] = do
+    let dInt = readMaybe d :: Maybe Int
+    let pInt = readMaybe p :: Maybe Int
+    let sol = getModule dInt pInt
+    case (sol, path) of
+        (Just f, i) -> return Day{solution = f, input = i}
+        (Nothing, _) -> putStrLn "Solution not yet implemented" >> exitFailure
 parse _ = usage >> exitFailure
 
 usage :: IO ()
